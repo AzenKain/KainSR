@@ -26,38 +26,65 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+# Note: This version will use freesr-data.json instead config.json
 
+# For auto native with another version of game 2.4.x::
 ```bash
-$ npm install
+$ Move folder StarRail_2.4.x to KainSR
 ```
+![image](https://github.com/user-attachments/assets/9aa412ea-df77-47b3-91ec-b5a4817561d9)
 
-## 1, Auto case:
+# 1. Auto Case:
+
+## 1.1, Auto case install:
+```bash
+$ run file install.bat
+```
+## 1.2, Auto case run:
 ```bash
 $ run file run.bat
 ```
+### Note: You need to wait for the server started fully like this:
+![image](https://github.com/user-attachments/assets/be0b33f2-df35-4435-bfd0-a95b55b85e7e)
 
-## 2, Manual Case:
-
-## 2.1 Proxy
+# 2, Manual Case:
+## 2.1 Install
+```bash
+$ npm install
+```
+## 2.2 Proxy
 
 ```bash
 $ you need run FireflySR.Tool.Proxy.exe in FireFly.Proxy.v2
 ```
-
-## 2.2 Running the app
+## 2.3 Running the app
 
 ```bash
 # development
 $ npm run start
 
-# watch mode 
-$ npm run start:dev 
+# watch mode (Recommend)
+$ npm run start:dev   
 
 # production mode
 $ npm run start:prod
 ```
+# 3. Set up freesr-data:
+## 3.1 Update new freesr-data.json
 
+```bash
+$ you can update the new freesr-data.json in src/data
+```
+## 3.2 Update new data in-game
+
+```bash
+$ you can type /update in-game to update new data from the new freesr-data.json
+```
+## 3.3 Change the Path of some MultiPathCharacters
+
+```bash
+$ you can type /id + idChar ex: /id 8006 in-game to update new Path for this character
+```
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
