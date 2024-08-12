@@ -1,5 +1,0 @@
-export * from "./auth"
-export * from "./avatar"
-export * from "./"
-export * from "./auth"
-export * from "./auth"
