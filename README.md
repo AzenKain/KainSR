@@ -28,7 +28,7 @@
 
 # Note: This version will use freesr-data.json instead config.json
 
-# For auto native with another version of game 2.4.x::
+# For auto native with another version of game 2.4.x:
 ```bash
 $ Move folder StarRail_2.4.x to KainSR
 ```
