@@ -33,7 +33,7 @@ export class DataService {
     private march7Id: number
     constructor() {
         // version input
-        const filePathVersion = path.resolve(process.cwd(),'./src/data/version.json');
+        const filePathVersion = path.resolve(process.cwd(),'./data/version.json');
         const fileContentsVersion = fs.readFileSync(filePathVersion, 'utf-8');
         this.dataVersion = JSON.parse(fileContentsVersion) as VersionConfig;
 
@@ -144,7 +144,7 @@ export class DataService {
     };
 
     saveVersion() {
-        const filePathVersion = path.resolve(process.cwd(), './src/data/version.json');
+        const filePathVersion = path.resolve(process.cwd(), './data/version.json');
         const updatedContentsVersion = JSON.stringify(this.dataVersion, null, 2);
         fs.writeFileSync(filePathVersion, updatedContentsVersion, 'utf-8');
     }
@@ -162,23 +162,23 @@ export class DataService {
     }
 
     async updateDataJson() {
-        const filePathJson = path.resolve(process.cwd(), './src/data/freesr-data.json');
+        const filePathJson = path.resolve(process.cwd(), './data/freesr-data.json');
         this.dataJson = await this.dataJson.loadJson(filePathJson)
     }
 
     async updateDataInGame() {
-        const filePathJson = path.resolve(process.cwd(), './src/data/data-in-game.json');
+        const filePathJson = path.resolve(process.cwd(), './data/data-in-game.json');
         this.dataInGame = await this.dataInGame.loadJson(filePathJson)
     }
 
     async saveDataLineUp(lineups: { [key: string]: number }) {
-        const filePathJson = path.resolve(process.cwd(), './src/data/data-in-game.json');
+        const filePathJson = path.resolve(process.cwd(), './data/data-in-game.json');
         this.dataInGame.lineups = lineups
         await this.dataInGame.saveJson(filePathJson)
     }
 
     async updateDataResource() {
-        const filePathJson = path.resolve(process.cwd(), './src/data/resources.json');
+        const filePathJson = path.resolve(process.cwd(), './data/resources.json');
         this.dataRecourse = await this.dataRecourse.loadJson(filePathJson)
     }
 }

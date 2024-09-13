@@ -152,6 +152,7 @@ export async function onGetMissionStatusCsReq(
         missionEventStatusList: [],
         finishedMainMissionIdList: []
     });
+
     if (body.subMissionIdList) {
         for (let i = 0; i < body.subMissionIdList.length; i++) {
             proto.subMissionStatusList.push({

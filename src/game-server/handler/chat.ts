@@ -42,11 +42,11 @@ async function DisplayMessage(
     text: string
 ) {
     const proto: starrail.RevcMsgScNotify = new starrail.RevcMsgScNotify({
-        GPCNECEDGOF: body.GPCNECEDGOF,
+        BNABNCCMILM: body.BNABNCCMILM,
         messageType: body.messageType,
         messageText: text,
         chatType: body.chatType,
-        formId: 1334,
+        fromId: 1334,
         toId: 1314,
         extraId: body.extraId
     })

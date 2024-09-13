@@ -1,0 +1,20 @@
+{
+  "OSBETAWin2.5.51": {
+    "asset_bundle_url": "https://autopatchos.starrails.com/asb/BetaLive/output_7977788_8e5398808c48",
+    "ex_resource_url": "https://autopatchos.starrails.com/design_data/BetaLive/output_7977788_fbee58389b44",
+    "lua_url": "https://autopatchos.starrails.com/lua/BetaLive/output_7980531_55efc4794b38",
+    "ifixUrl": "https://autopatchos.starrails.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "7980531",
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  },
+  "undefined": {
+    "asset_bundle_url": "https://autopatchos.starrails.com/asb/BetaLive/output_7977788_8e5398808c48",
+    "ex_resource_url": "https://autopatchos.starrails.com/design_data/BetaLive/output_7977788_fbee58389b44",
+    "lua_url": "https://autopatchos.starrails.com/lua/BetaLive/output_7980531_55efc4794b38",
+    "ifixUrl": "https://autopatchos.starrails.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "7980531",
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  }
+}

@@ -1,0 +1,2 @@
+npx pbjs -t static-module -w commonjs -o src/proto/starrail.js src/proto/starrail.proto
+npx pbts -o src/proto/starrail.d.ts src/proto/starrail.js

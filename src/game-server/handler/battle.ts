@@ -95,7 +95,7 @@ export async function onStartCocoonStageCsReq(
     // PF score object
     if (jsonData.battle_config.battle_type === 'PF') {
         const battleTargetList = new starrail.BattleTargetList({
-            KNBBHOJNOFF: [new starrail.BattleTarget({ id: 10001, progress: 0 })]
+            battleTargetList: [new starrail.BattleTarget({ id: 10001, progress: 0 })]
         });
 
         battleInfo.battleTargetInfo[1] = battleTargetList;
@@ -103,7 +103,7 @@ export async function onStartCocoonStageCsReq(
             battleInfo.battleTargetInfo[i] = new starrail.BattleTargetList();
         }
         battleInfo.battleTargetInfo[5] = new starrail.BattleTargetList({
-            KNBBHOJNOFF: [
+            battleTargetList: [
                 new starrail.BattleTarget({ id: 2001, progress: 0 }),
                 new starrail.BattleTarget({ id: 2002, progress: 0 })
             ]
@@ -113,16 +113,16 @@ export async function onStartCocoonStageCsReq(
     // Apocalyptic Shadow
     if (jsonData.battle_config.battle_type === 'AS') {
         const battleTargetList = new starrail.BattleTargetList({
-            KNBBHOJNOFF: [new starrail.BattleTarget({ id: 90005, progress: 0 })]
+            battleTargetList: [new starrail.BattleTarget({ id: 90005, progress: 0 })]
         });
         battleInfo.battleTargetInfo[1] = battleTargetList;
     }
 
     // SU
     if (jsonData.battle_config.battle_type === 'SU') {
-        battleInfo.APKPBAMMNHM.push(new starrail.PLDMLJCICKK({
-            GHHNOEFIBKE: jsonData.battle_config.path_resonance_id,
-            status: new starrail.CHCJBNEICFA({
+        battleInfo.battleDetail.push(new starrail.BattleDetail({
+            LJJHPNFNOCM: jsonData.battle_config.path_resonance_id,
+            status: new starrail.SpProgressBattle({
                 sp: new starrail.SpProgress({
                     spCur: 10000,
                     spNeed: 10000

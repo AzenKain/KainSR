@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as protobuf from 'protobufjs';
 
 // Path to your .proto file
-const protoFilePath = path.resolve(process.cwd(), 'src/proto/HSR_2.4.53_LitianLeak.proto');
+const protoFilePath = path.resolve(process.cwd(), 'src/proto/starrail_2.proto');
 
 // Path to the output file
 const outputFilePath = path.resolve(process.cwd(), 'src/proto/cmdId.ts');
