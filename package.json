@@ -1,5 +1,5 @@
 {
-  "name": "kainsr-2.3.5",
+  "name": "kainsr-2.5.5",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -33,7 +33,10 @@
     "protobufjs": "^7.3.2",
     "protobufjs-cli": "^1.1.2",
     "reflect-metadata": "^0.2.0",
-    "rxjs": "^7.8.1"
+    "resedit": "^2.0.2",
+    "resedit-cli": "^2.0.0",
+    "rxjs": "^7.8.1",
+    "node-kcp-token": "github:memetrollsxd/node-kcp"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
@@ -74,5 +77,15 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "bin": "dist/main.js",
+  "pkg": {
+    "scripts": "dist/main.js",
+    "targets": [
+      "node16-win-x64"
+    ],
+    "assets": [
+      "node_modules/axios/**/*"
+    ]
   }
 }

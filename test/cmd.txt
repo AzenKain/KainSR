@@ -1,2 +1,4 @@
 npx pbjs -t static-module -w commonjs -o src/proto/starrail.js src/proto/starrail.proto
 npx pbts -o src/proto/starrail.d.ts src/proto/starrail.js
+npx resedit --in .\kainsr.exe --out ./builder/kainsr.exe --icon 1,logo.ico --no-grow
+pkg --targets node16-win-x64 --public --out-path . .

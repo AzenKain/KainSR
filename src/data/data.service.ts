@@ -7,9 +7,9 @@ import { fetchVersionData } from './FetchHotfix/fetch';
 import { JsonData } from './loadFreeData';
 import { DataInGame } from './loadDataInGame';
 import { GameResources } from './loadResources';
-import { NetSession } from 'src/game-server/NetSession';
-import { starrail } from 'src/proto/starrail';
-import { CmdID } from 'src/proto/cmdId';
+import { NetSession } from '@/game-server-kcp/NetSession';
+import { starrail } from '@/proto/starrail';
+import { CmdID } from '@/proto/cmdId';
 
 
 export interface VersionConfig {

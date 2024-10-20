@@ -19,12 +19,12 @@ export class RelicJson {
     public equip_avatar: number;
 
     constructor(
-        level: number, 
-        relic_id: number, 
-        relic_set_id: number, 
-        main_affix_id: number, 
-        sub_affixes: SubAffix[], 
-        internal_uid: number, 
+        level: number,
+        relic_id: number,
+        relic_set_id: number,
+        main_affix_id: number,
+        sub_affixes: SubAffix[],
+        internal_uid: number,
         equip_avatar: number
     ) {
         this.level = level;
@@ -140,10 +140,10 @@ type AvatarData = {
 }
 
 export class AvatarJson {
-    public owner_uid : number;
-    public avatar_id : number;
+    public owner_uid: number;
+    public avatar_id: number;
     public data: AvatarData;
-    public level : number;
+    public level: number;
     public promotion: number;
     public techniques: number[];
     public sp_value: number;
@@ -197,7 +197,7 @@ export class AvatarJson {
         });
     }
 
-    public to_battle_avatar_proto(index: number, lightcone?: LightconeJson, relics: RelicJson[] = [],): [starrail.BattleAvatar,  starrail.BattleBuff[]] {
+    public to_battle_avatar_proto(index: number, lightcone?: LightconeJson, relics: RelicJson[] = [],): [starrail.BattleAvatar, starrail.BattleBuff[]] {
         const battleAvatar = new starrail.BattleAvatar({
             index: index,
             avatarType: starrail.AvatarType.AVATAR_FORMAL_TYPE,
@@ -218,17 +218,36 @@ export class AvatarJson {
                 spNeed: this.sp_max || 10000,
             })
         });
-    
-        const buffs = this.techniques.map(buffId => new starrail.BattleBuff({
-            waveFlag: 0xffffffff,
-            ownerIndex: index,
-            level: 1,
-            id: buffId,
-        }));
-    
-        return [battleAvatar, buffs]
+
+        const buffs = this.techniques.map(buffId => {
+            const buff1 = new starrail.BattleBuff({
+                waveFlag: 0xffffffff,
+                ownerIndex: index,
+                level: 1,
+                id: buffId,
+                dynamicValues: {
+                    SkillIndex: 0
+                },
+                targetIndexList: [0]
+            });
+        
+            const buff2 = new starrail.BattleBuff({
+                waveFlag: 0xffffffff,
+                ownerIndex: index,
+                level: 1,
+                id: 1000119,
+                dynamicValues: {
+                    SkillIndex: 0
+                },
+                targetIndexList: [0]
+            });
+        
+            return [buff1, buff2];
+        });
+
+        return [battleAvatar, buffs.flat()]
     }
-    
+
 
     public to_lineup_avatar_proto(slot: number): starrail.LineupAvatar {
         return new starrail.LineupAvatar({
@@ -277,7 +296,7 @@ export class MonsterJson {
     public monster_id: number;
     public level: number;
     public amount: number;
-    
+
 
     constructor(monster_id: number, level: number, amount: number) {
         this.monster_id = monster_id;
@@ -365,7 +384,7 @@ export class BattleConfigJson {
     public blessings: BattleBuffJson[]
     public custom_stats: SubAffix[];
     public cycle_count: number;
-    public stage_id:number;
+    public stage_id: number;
     public path_resonance_id: number;
     public monsters: MonsterJson[][]
 
@@ -404,7 +423,7 @@ export class BattleConfigJson {
 export class JsonData {
     public lightcones: LightconeJson[];
     public relics: RelicJson[];
-    public avatars: { [key: string] : AvatarJson };
+    public avatars: { [key: string]: AvatarJson };
     public battle_config: BattleConfigJson;
 
 

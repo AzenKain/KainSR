@@ -54,14 +54,14 @@ export class HttpServerService {
             unk5: true,
             unk6: true,
             unk7: true,
-            NNGLEBKCMLA: true,
-            APJECJMGAKC: true,
-            NPHDIMJOKNI: true,
-            JGCIILJEHHE: true,
-            CNAKLGMDLPE: true,
-            LAABLMNKLLD: true,
-            OFJAKNEDMDM: true,
-            EBKBNEKCOHI: true
+            // NNGLEBKCMLA: true,
+            // APJECJMGAKC: true,
+            // NPHDIMJOKNI: true,
+            // JGCIILJEHHE: true,
+            // CNAKLGMDLPE: true,
+            // LAABLMNKLLD: true,
+            // OFJAKNEDMDM: true,
+            // EBKBNEKCOHI: true
             
         });
         const buffer = starrail.Gateserver.encode(proto).finish();
@@ -71,7 +71,7 @@ export class HttpServerService {
     async loginWithPassportService() {
         return {
             "data": {
-                "id": "06611ed14c3131a676b19c0d34c0644b",
+                "id": "1334",
                 "action": "ACTION_NONE",
                 "geetest": null
             }, "message": "OK", "retcode": 0
@@ -101,7 +101,7 @@ export class HttpServerService {
     async riskyApiCheckService() {
         return {
             "data": {
-                "id": "06611ed14c3131a676b19c0d34c0644b",
+                "id": "1334",
                 "action": "ACTION_NONE",
                 "geetest": null
             },
@@ -114,8 +114,8 @@ export class HttpServerService {
         return {
             "data": {
                 "account_type": 1,
-                "combo_id": "1337",
-                "combo_token": "9065ad8507d5a1991cb6fddacac5999b780bbd92",
+                "combo_id": "1334",
+                "combo_token": "mostsecuretokenever",
                 "data": "{\"guest\":false}",
                 "heartbeat": false,
                 "open_id": "1334"
@@ -202,7 +202,7 @@ export class HttpServerService {
     }
 
     async shieldApiVerifyService(body: any) {
-        let token = 'aa';
+        let token = 'mostsecuretokenever';
         let uid = '1334';
 
         if (body) {
