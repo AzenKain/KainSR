@@ -31,7 +31,6 @@ export async function onGetFriendListInfoCsReq(
     })
 
     proto.friendInfoList.push(simpleFriend)
-    console.log(proto.friendInfoList)
     const bufferData = starrail.GetFriendListInfoScRsp.encode(proto).finish()
     await player.send(CmdID.CmdGetFriendListInfoScRsp, bufferData);
 }

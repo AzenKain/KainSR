@@ -20,6 +20,7 @@ export async function onGetCurLineupDataCsReq (
     const bufferData = starrail.GetCurLineupDataScRsp.encode(proto).finish()
     await player.send(CmdID.CmdGetCurLineupDataScRsp, bufferData)
 }
+
 export async function onGetAllLineupDataCsReq(
     body: any, 
     player: NetSession,

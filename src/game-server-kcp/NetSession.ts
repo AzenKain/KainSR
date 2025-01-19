@@ -21,7 +21,8 @@ import {
     onGetBasicInfoCsReq,
     onGetTutorialGuideCsReq,
     onGetTutorialCsReq,
-    onGetAllLineupDataCsReq
+    onGetAllLineupDataCsReq,
+    onGetCurSceneInfoCsReqFix
 } from "./handler"
 import { starrail } from "src/proto/starrail";
 import { DataService } from "src/data/data.service";

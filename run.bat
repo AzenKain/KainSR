@@ -1,7 +1,7 @@
 @echo off
 
 echo Starting Server...
-start cmd /k "npm run start:dev"
+start cmd /k "npm run start"
 
 echo Starting Proxy...
 cd "FireFly.Proxy.v2"

@@ -37,7 +37,6 @@ export class GameServerKcpService implements OnModuleInit {
     }
     private output(buf: Buffer, size: number, ctx: { address: string, port: number, family: string }) {
         if (!buf) return;
-        this.logger.log(new Uint8Array(buf))
         this.server.send(buf, 0, size, ctx.port, ctx.address);
     }
 

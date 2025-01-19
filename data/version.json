@@ -1,55 +1,100 @@
 {
-  "OSBETAWin2.5.51": {
-    "asset_bundle_url": "https://autopatchos.starrails.com/asb/BetaLive/output_7977788_8e5398808c48",
-    "ex_resource_url": "https://autopatchos.starrails.com/design_data/BetaLive/output_7977788_fbee58389b44",
-    "lua_url": "https://autopatchos.starrails.com/lua/BetaLive/output_7980531_55efc4794b38",
-    "ifixUrl": "https://autopatchos.starrails.com/ifix/BetaLive/output_0_40d2ce0253",
-    "lua_version": "7980531",
-    "customMdkResVersion": 0,
-    "customIfixVersion": 0
-  },
-  "OSBETAWin2.5.52": {
-    "asset_bundle_url": "https://autopatchos.starrails.com/asb/BetaLive/output_8023914_1c5d3bc509a7",
-    "ex_resource_url": "https://autopatchos.starrails.com/design_data/BetaLive/output_8023914_b27d1db5c7a4",
-    "lua_url":  "https://autopatchos.starrails.com/lua/BetaLive/output_8023974_8a20ac590d04",
-    "ifixUrl": "https://autopatchos.starrails.com/ifix/BetaLive/output_0_40d2ce0253",
-    "lua_version": "8023974",
-    "customMdkResVersion": 0,
-    "customIfixVersion": 0
-  },
-  "CNBETAWin2.5.53": {
-    "asset_bundle_url": "https://autopatchcn.bhsr.com/asb/BetaLive/output_8064274_be70b77f4751",
-    "ex_resource_url": "https://autopatchcn.bhsr.com/design_data/BetaLive/output_8064276_c277194ba0ba",
-    "lua_url":  "https://autopatchcn.bhsr.com/lua/BetaLive/output_8064443_f73a99152472",
-    "ifixUrl": "https://autopatchcn.bhsr.com/ifix/BetaLive/output_0_40d2ce0253",
-    "lua_version": "8064443",
-    "customMdkResVersion": 0,
-    "customIfixVersion": 0
-  },
-  "OSBETAWin2.5.53": {
-    "asset_bundle_url": "https://autopatchcn.bhsr.com/asb/BetaLive/output_8064274_be70b77f4751",
-    "ex_resource_url": "https://autopatchcn.bhsr.com/design_data/BetaLive/output_8064276_c277194ba0ba",
-    "lua_url":  "https://autopatchcn.bhsr.com/lua/BetaLive/output_8064443_f73a99152472",
-    "ifixUrl": "https://autopatchcn.bhsr.com/ifix/BetaLive/output_0_40d2ce0253",
-    "lua_version": "8064443",
-    "customMdkResVersion": 0,
-    "customIfixVersion": 0
-  },
-  "CNBETAWin2.5.54": {
-    "asset_bundle_url": "https://autopatchcn.bhsr.com/asb/BetaLive/output_8110568_1ca8e9e840cb",
-    "ex_resource_url": "https://autopatchcn.bhsr.com/design_data/BetaLive/output_8140306_45c593e71df0",
-    "lua_url":  "https://autopatchcn.bhsr.com/lua/BetaLive/output_8110845_6e6327ca1e4b",
-    "ifixUrl": "",
-    "lua_version": "8110845",
-    "customMdkResVersion": 0,
-    "customIfixVersion": 0
-  },
   "undefined": {
-    "asset_bundle_url": "https://autopatchcn.bhsr.com/asb/BetaLive/output_8110568_1ca8e9e840cb",
-    "ex_resource_url": "https://autopatchcn.bhsr.com/design_data/BetaLive/output_8140306_45c593e71df0",
-    "lua_url":  "https://autopatchcn.bhsr.com/lua/BetaLive/output_8110845_6e6327ca1e4b",
-    "ifixUrl": "",
-    "lua_version": "8110845",
+    "asset_bundle_url": "https://autopatchos.starrails.com/asb/BetaLive/output_8255911_73424ed8f1d9",
+    "ex_resource_url": "https://autopatchos.starrails.com/design_data/BetaLive/output_8278172_2bef625c3daf",
+    "lua_url": "https://autopatchos.starrails.com/lua/BetaLive/output_8256066_d4950eb37f1e",
+    "ifixUrl": "https://autopatchos.starrails.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "8256066",
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  },
+  "CNBETAWin2.6.51": {
+    "asset_bundle_url": "https://autopatchos.starrails.com/asb/BetaLive/output_8255911_73424ed8f1d9",
+    "ex_resource_url": "https://autopatchos.starrails.com/design_data/BetaLive/output_8278172_2bef625c3daf",
+    "lua_url": "https://autopatchos.starrails.com/lua/BetaLive/output_8256066_d4950eb37f1e",
+    "ifixUrl": "https://autopatchos.starrails.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "8256066",
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  },
+  "CNBETAWin2.6.52": {
+    "asset_bundle_url": "https://autopatchcn.bhsr.com/asb/BetaLive/output_8311876_132b0541de56",
+    "ex_resource_url": "https://autopatchcn.bhsr.com/design_data/BetaLive/output_8344272_13e253224d82",
+    "lua_url": "https://autopatchcn.bhsr.com/lua/BetaLive/output_8312107_56d36149f634",
+    "ifixUrl": "https://autopatchcn.bhsr.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "8312107",
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  },
+  "CNBETAWin2.6.53": {
+    "asset_bundle_url": "https://autopatchcn.bhsr.com/asb/BetaLive/output_8373375_fe8534d45033",
+    "ex_resource_url": "https://autopatchcn.bhsr.com/design_data/BetaLive/output_8397887_2bec65c08d76",
+    "lua_url": "https://autopatchcn.bhsr.com/lua/BetaLive/output_8373879_2195928a1876",
+    "ifixUrl": "https://autopatchcn.bhsr.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "8373879",
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  },
+  "CNBETAWin2.6.54": {
+    "asset_bundle_url": "https://autopatchcn.bhsr.com/asb/BetaLive/output_8448286_c2eb6137cc64",
+    "ex_resource_url": "https://autopatchcn.bhsr.com/design_data/BetaLive/output_8448286_10002cf1a8a3",
+    "lua_url": "https://autopatchcn.bhsr.com/lua/BetaLive/output_8449174_c5fe4343f9f8",
+    "ifixUrl": "https://autopatchcn.bhsr.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "8449174",
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  },
+  "CNBETAWin2.6.55": {
+    "asset_bundle_url": "https://autopatchos.starrails.com/asb/BetaLive/output_8515895_519c5179c9d5",
+    "ex_resource_url": "https://autopatchos.starrails.com/design_data/BetaLive/output_8548479_447180fdc6fb",
+    "lua_url": "https://autopatchos.starrails.com/lua/BetaLive/output_8516917_89a9da29e9bc",
+    "ifix_url": "https://autopatchos.starrails.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "8516917",
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  },
+  "OSBETAWin2.6.51": {
+    "asset_bundle_url": "https://autopatchos.starrails.com/asb/BetaLive/output_8255911_73424ed8f1d9",
+    "ex_resource_url": "https://autopatchos.starrails.com/design_data/BetaLive/output_8278172_2bef625c3daf",
+    "lua_url": "https://autopatchos.starrails.com/lua/BetaLive/output_8256066_d4950eb37f1e",
+    "ifixUrl": "https://autopatchos.starrails.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "8256066",
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  },
+  "OSBETAWin2.6.52": {
+    "asset_bundle_url": "https://autopatchcn.bhsr.com/asb/BetaLive/output_8311876_132b0541de56",
+    "ex_resource_url": "https://autopatchcn.bhsr.com/design_data/BetaLive/output_8344272_13e253224d82",
+    "lua_url": "https://autopatchcn.bhsr.com/lua/BetaLive/output_8312107_56d36149f634",
+    "ifixUrl": "https://autopatchcn.bhsr.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "8312107",
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  },
+  "OSBETAWin2.6.53": {
+    "asset_bundle_url": "https://autopatchcn.bhsr.com/asb/BetaLive/output_8373375_fe8534d45033",
+    "ex_resource_url": "https://autopatchcn.bhsr.com/design_data/BetaLive/output_8397887_2bec65c08d76",
+    "lua_url": "https://autopatchcn.bhsr.com/lua/BetaLive/output_8373879_2195928a1876",
+    "ifixUrl": "https://autopatchcn.bhsr.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "8373879",
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  },
+  "OSBETAWin2.6.54": {
+    "asset_bundle_url": "https://autopatchcn.bhsr.com/asb/BetaLive/output_8448286_c2eb6137cc64",
+    "ex_resource_url": "https://autopatchcn.bhsr.com/design_data/BetaLive/output_8448286_10002cf1a8a3",
+    "lua_url": "https://autopatchcn.bhsr.com/lua/BetaLive/output_8449174_c5fe4343f9f8",
+    "ifixUrl": "https://autopatchcn.bhsr.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "8449174",
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  },
+  "OSBETAWin2.6.55": {
+    "asset_bundle_url": "https://autopatchos.starrails.com/asb/BetaLive/output_8515895_519c5179c9d5",
+    "ex_resource_url": "https://autopatchos.starrails.com/design_data/BetaLive/output_8548479_447180fdc6fb",
+    "lua_url": "https://autopatchos.starrails.com/lua/BetaLive/output_8516917_89a9da29e9bc",
+    "ifix_url": "https://autopatchos.starrails.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "8516917",
     "customMdkResVersion": 0,
     "customIfixVersion": 0
   }

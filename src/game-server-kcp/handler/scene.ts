@@ -51,7 +51,7 @@ async function loadScene(player: NetSession, dataModule: DataService, entry_id: 
         planeId: jsonData.scene.plane_id,
         floorId: jsonData.scene.floor_id,
         sceneGroupList: [],
-        JNCGAINGMMM : 1
+        uk1 : 1
     });
 
     // Load player entity
@@ -96,7 +96,7 @@ async function loadScene(player: NetSession, dataModule: DataService, entry_id: 
                 groupId: parseInt(groupId),
                 entityId: 1337,
                 prop: new starrail.ScenePropInfo({
-                    propId: 808,
+                    propEntityId: 808,
                     propState: 1
                 }),
                 motion: groupPosition.to_motion()
@@ -125,7 +125,7 @@ async function loadScene(player: NetSession, dataModule: DataService, entry_id: 
                 groupId: prop.groupId,
                 motion: propPosition.to_motion(),
                 prop: new starrail.ScenePropInfo({
-                    propId: prop.PropID,
+                    propEntityId: prop.PropID,
                     propState: propState
                 }),
                 entityId: propEntityId
@@ -285,7 +285,7 @@ export async function onGetCurSceneInfoCsReqFix(
         scene_group.groupId = 186;
 
         const prop: starrail.ScenePropInfo = new starrail.ScenePropInfo();
-        prop.propId = 808;
+        prop.propEntityId = 808;
         prop.propState = 1;
 
         scene_group.entityList.push(new starrail.SceneEntityInfo({
@@ -318,20 +318,20 @@ export async function onSceneEntityMoveCsReq(
     player: NetSession,
     dataModule: any | null = null
 ) {
-    // for (let i = 0; i < body.entityMotionList.length; i++) {
-    //     if (body.entityMotionList[i].motion) {
-    //         console.log(`
-    //             [POSITION] entity_id: ${body.entityMotionList[i].entityId}, 
-    //             posX: ${body.entityMotionList[i].motion.pos.x}, 
-    //             posY: ${body.entityMotionList[i].motion.pos.y}, 
-    //             posZ: ${body.entityMotionList[i].motion.pos.z}, 
-    //             rotX: ${body.entityMotionList[i].motion.rot.x},
-    //             rotY: ${body.entityMotionList[i].motion.rot.x},
-    //             rotZ: ${body.entityMotionList[i].motion.rot.x},
-    //             `
-    //         )
-    //     }
-    // }  
+    for (let i = 0; i < body.entityMotionList.length; i++) {
+        if (body.entityMotionList[i].motion) {
+            console.log(`
+                [POSITION] entity_id: ${body.entityMotionList[i].entityId}, 
+                posX: ${body.entityMotionList[i].motion.pos.x}, 
+                posY: ${body.entityMotionList[i].motion.pos.y}, 
+                posZ: ${body.entityMotionList[i].motion.pos.z}, 
+                rotX: ${body.entityMotionList[i].motion.rot.x},
+                rotY: ${body.entityMotionList[i].motion.rot.x},
+                rotZ: ${body.entityMotionList[i].motion.rot.x},
+                `
+            )
+        }
+    }  
     const proto: starrail.SceneEntityMoveScRsp = new starrail.SceneEntityMoveScRsp({
         retcode: 0,
         entityMotionList: body.entityMotionList,

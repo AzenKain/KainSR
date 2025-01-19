@@ -121,7 +121,7 @@ export async function onStartCocoonStageCsReq(
     // SU
     if (jsonData.battle_config.battle_type === 'SU') {
         battleInfo.battleDetail.push(new starrail.BattleDetail({
-            LJJHPNFNOCM: jsonData.battle_config.path_resonance_id,
+            pathResonanceId: jsonData.battle_config.path_resonance_id,
             status: new starrail.SpProgressBattle({
                 sp: new starrail.SpProgress({
                     spCur: 10000,
