@@ -24,10 +24,10 @@ export class HttpServerService {
         return Buffer.from(buffer).toString("base64");
     }
 
-    async getGatewayService(versions: string) {
+    async getGatewayService(versions: string, dispatchSeed: string) {
         let dataVersion: VersionConfig = this.dataService.getVersionData()
         if (!dataVersion[versions]) {
-            if (await this.dataService.autoUpdateVersion(versions)) {
+            if (await this.dataService.autoUpdateVersion(versions, dispatchSeed)) {
                 dataVersion = this.dataService.getVersionData()
             }
             else {
@@ -44,8 +44,8 @@ export class HttpServerService {
             assetBundleUrl: dataVersion[versions].asset_bundle_url,
             exResourceUrl: dataVersion[versions].ex_resource_url,
             luaUrl: dataVersion[versions].lua_url,
-            luaVersion: dataVersion[versions].lua_version,
-            ifixVersion: dataVersion[versions].ifixUrl,
+            luaVersion: "0",
+            ifixVersion: dataVersion[versions].ifix_url,
             uk1: true,
             uk2: true,
             uk3: true,

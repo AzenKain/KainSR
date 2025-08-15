@@ -14,8 +14,8 @@ export class HttpServerController {
     }
         
     @Get("/query_gateway")
-    async getGateway(@Query("version") version : string) {
-        return await this.httpServerService.getGatewayService(version);
+    async getGateway(@Query("version") version : string, @Query("dispatch_seed") dispatchSeed : string) {
+        return await this.httpServerService.getGatewayService(version, dispatchSeed);
     }
 
     @Post("/:product_name/mdk/shield/api/login")

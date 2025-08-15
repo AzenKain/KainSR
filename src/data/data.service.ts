@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as fs from 'fs-extra';
 import { join } from 'path';
 import { readdirSync, statSync } from 'fs';
-import { fetchVersionData } from './FetchHotfix/fetch';
+import { fetchHotfix } from './autoFetchHotfix';
 import { JsonData } from './loadFreeData';
 import { DataInGame } from './loadDataInGame';
 import { GameResources } from './loadResources';
@@ -17,15 +17,13 @@ export interface VersionConfig {
         asset_bundle_url: string;
         ex_resource_url: string;
         lua_url: string;
-        lua_version: string;
-        ifixUrl: string;
+        ifix_url: string;
     };
 }
 
 @Injectable()
 export class DataService {
     private dataVersion: VersionConfig;
-    private dirFolderGame: string | null;
     private dataJson: JsonData
     private dataInGame: DataInGame
     private dataRecourse: GameResources
@@ -36,10 +34,6 @@ export class DataService {
         const filePathVersion = path.resolve(process.cwd(),'./data/version.json');
         const fileContentsVersion = fs.readFileSync(filePathVersion, 'utf-8');
         this.dataVersion = JSON.parse(fileContentsVersion) as VersionConfig;
-
-        //Check exist folder game
-        this.dirFolderGame = null;
-        this.checkStarRailFolders()
 
         //Data Json
         this.dataJson = new JsonData();
@@ -125,36 +119,21 @@ export class DataService {
         return this.dataRecourse;
     }
 
-    checkStarRailFolders = () => {
-        const baseDir = join(__dirname, '..', '..');
-        const targetFolders = ['Star Rail', 'StarRail'].map(folder => folder.toLowerCase());
-        const directories = readdirSync(baseDir).filter(file => {
-            const fullPath = join(baseDir, file);
-            return statSync(fullPath).isDirectory();
-        });
-    
-        const foundFolders = directories.filter(directory => 
-            targetFolders.some(target => directory.toLowerCase().startsWith(target))
-        );
-    
-        if (foundFolders.length > 0) {
-            this.dirFolderGame = join(__dirname, '..', '..', foundFolders[0]);
-            console.log("Folder game detected: ", this.dirFolderGame)
-        } 
-    };
-
     saveVersion() {
         const filePathVersion = path.resolve(process.cwd(), './data/version.json');
         const updatedContentsVersion = JSON.stringify(this.dataVersion, null, 2);
         fs.writeFileSync(filePathVersion, updatedContentsVersion, 'utf-8');
     }
 
-    async autoUpdateVersion(version: string) : Promise<boolean> {
-        if (!this.dirFolderGame) return false;
-        const dataReturn = await fetchVersionData(this.dirFolderGame)
-        console.log(dataReturn)
+    async autoUpdateVersion(version: string, dispatchSeed: string) : Promise<boolean> {
+        const dataReturn = await fetchHotfix(version, dispatchSeed)
         if (dataReturn) {
-            this.dataVersion[version] = dataReturn;
+            this.dataVersion[version] = {
+                asset_bundle_url: dataReturn["assetBundleUrl"],
+                ex_resource_url: dataReturn["exResourceUrl"],
+                lua_url: dataReturn["luaUrl"],
+                ifix_url: dataReturn["ifixUrl"]
+            }
             this.saveVersion()
             return true;
         }
